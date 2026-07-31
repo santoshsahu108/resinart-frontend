@@ -1,6 +1,11 @@
 import { products } from '../data/content'
 import PlaceholderArt from './PlaceholderArt'
+import keychainsImg from '../assets/resin-keychains.png'
 import './Products.css'
+
+const PRODUCT_IMAGES: Record<string, string> = {
+  'Galaxy Keychain': keychainsImg,
+}
 
 function Products() {
   return (
@@ -10,7 +15,11 @@ function Products() {
         {products.map((product) => (
           <article key={product.name} className="product-card">
             <div className="product-art">
-              <PlaceholderArt variant={product.variant} label={product.name} />
+              {PRODUCT_IMAGES[product.name] ? (
+                <img src={PRODUCT_IMAGES[product.name]} alt={product.name} />
+              ) : (
+                <PlaceholderArt variant={product.variant} label={product.name} />
+              )}
             </div>
             <h3>{product.name}</h3>
             <p className="product-price">{product.price}</p>
