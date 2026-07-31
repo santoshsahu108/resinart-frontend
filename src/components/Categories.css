@@ -37,9 +37,15 @@
   margin: 0 auto 16px;
 }
 
-.category-art svg {
+.category-art svg,
+.category-art img {
   width: 100%;
   height: 100%;
+}
+
+.category-art img {
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .category-card h3 {
