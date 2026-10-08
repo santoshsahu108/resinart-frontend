@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     host: '127.0.0.1',
     port: 5173,
-    allowedHosts: ['resinart.orderlele.in'],
+    allowedHosts: ['resinart.orderlele.in', 'orderlele.in', 'www.orderlele.in'],
   },
 })
